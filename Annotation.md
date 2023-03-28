@@ -1,4 +1,4 @@
-# <span style="color: red;">@Annotations</span>
+# <div style="color: yellow;">@Annotations</div>
 - @RestController ប្រើសម្រាប់ កំណត់ថា class មួយណាដែលជា controller class ឬកំណត់ទីតាំងដើម្បី ស្គាល់ controller
 - @RequestMapping("api/") សម្រាប់ Request rout ទៅ endpoint ណាមួយ
 - @MappedSuperclass ប្រើសម្រាប់ចែកfields មានន័យថា យើងមាន class មួយជាមេ ឬentity មួយជាមេ សម្រាប់ចែក fields ដែលមាននៅក្នុង Base Entity ទៅកាន់ Entity កូនៗ
