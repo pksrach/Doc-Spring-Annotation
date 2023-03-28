@@ -47,8 +47,8 @@ Example in java code:
 <summary>@Qualifier Annotation</summary>
 <p>
 មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
-  <br>Example Code:
-  `code()`
+  <br>Example Code:</p>
+ </details>
   ```javascript
   public class UserService {
       private final UserRepository userRepository;
@@ -57,7 +57,5 @@ Example in java code:
         }
       }
   ```
-  
- </p>
 - @Ordered Annotation
 - @Lazy Annotation
