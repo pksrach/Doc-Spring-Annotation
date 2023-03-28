@@ -43,14 +43,21 @@ Example in java code:
 សម្រាប់ ដាក់នៅលើ function ណា ដែលយើងចង់ឲ្យវាក្លាយទៅជា bean, Bean មានន័យថា object មួយដែលយើងយកមកប្រកាស់ជា public ដែលនៅក្នុង project ទាំងមូល កន្លែងណាក៏អាច ហៅប្រើវាបានដែរ ហើយវាប្រកាស់ តែម្ដងទេ (Singleton)
 </p>
 </details>
-- @Qualifier Annotation មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
+<details>
+<summary>@Qualifier Annotation</summary>
+<p>
+មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
   <br>Example Code:
-  ```public class UserService {
-    private final UserRepository userRepository;
-    public UserService(@Qualifier("userRepositoryImpl1") UserRepository userRepository) {
-        this.userRepository = userRepository;
+  `code()`
+  ```javascript
+  public class UserService {
+      private final UserRepository userRepository;
+        public UserService(@Qualifier("userRepositoryImpl1") UserRepository userRepository) {
+          this.userRepository = userRepository;
+        }
       }
-    }
   ```
+  
+ </p>
 - @Ordered Annotation
 - @Lazy Annotation
