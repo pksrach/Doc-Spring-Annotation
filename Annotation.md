@@ -21,19 +21,28 @@
 - @JsonInclude(JsonInclude.Include.NON_NULL) បើសិនជា Field page វា Null ចឹង @JsonInclude អត់ឲ្យ Properties ចេញមកទេ, ទាល់តែវាអត់ null បានឲ្យចេញមក
 - @JsonIgnore hide data មិនចង់បង្ហាញ client ឃើញ។ Ex: ដូចជា password, date of birth, etc
 - @Transactional ប្រើសម្រាប់ ការធ្វើប្រតិបត្តិការអ្វីមួយ ដោយក្នុងប្រតិបត្តិការនោះមាន Process ២ ឬ ច្រើនជាងនេះ Process ទី១ update table user, និង process ទី២ update table invoice អញ្ចឹង អាពីរ process នេះ បើមួយណា update មិន success ទេ វានិង role back មកវិញទាំងអស់, វាអត់ update មួយ ហើយមួយទៀត អត់ update ទេ និយាយទៅដូចឈ្នាប់ AND ដែរ បើវាពិតត្រូវពិតទាំងអស់។
-- <details>
+<details>
 <summary>@JsonIgnoreProperties(ignoreUnknown = true)</summary>
 <p>
 ប្រើសម្រាប់ថាឧទាហរណ៍ពេលយើង object នឹងចូល database ឧបមារថា save ចូលមាន field id, name អីចឹងទៅ ហើយស្រាប់តែលើកក្រោយយើងថែម sex មួយទៀត ចឹងបើយើងប្រើ jsonIgnoreproperties នឹងគឹវាអត់ error អីទេ តែបើអត់ប្រើ វានឹង error ថាវារក field sex ទិន្នន័យចាស់ៗអត់ឃើញ ចឹងវាតម្រូវឲ្យយើងទៅដាក់ field sex នៅគ្រប់ទិន្នន័យចាស់ៗទាំងអស់។ 
-- @ComponentScan Annotation ភាគច្រើន ប្រើនៅកន្លែង config file ដែលយើងចង់ឲ្យវា scan នូវ package ណាមួយ (អាចដាក់ ឈ្មោះជា package ក៏បាន ឬជាឈ្មោះ class ក៏បាន ហើយអាច ប្រើបានជា multiple បានទៀត)
+</p>
+</details>
+<details>
+<summary>@ComponentScan Annotation</summary> 
+<p>
+ភាគច្រើន ប្រើនៅកន្លែង config file ដែលយើងចង់ឲ្យវា scan នូវ package ណាមួយ (អាចដាក់ ឈ្មោះជា package ក៏បាន ឬជាឈ្មោះ class ក៏បាន ហើយអាច ប្រើបានជា multiple បានទៀត)
 Example in java code:
 </p>
 </details>
-
 - @Component Annotation គឺជាមេ ពពួក (@Repository, @Service, @Controller)
 - @Controller Annotation
 - @Configuration Annotation សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
-- @Bean Annotation សម្រាប់ ដាក់នៅលើ function ណា ដែលយើងចង់ឲ្យវាក្លាយទៅជា bean, Bean មានន័យថា object មួយដែលយើងយកមកប្រកាស់ជា public ដែលនៅក្នុង project ទាំងមូល កន្លែងណាក៏អាច ហៅប្រើវាបានដែរ ហើយវាប្រកាស់ តែម្ដងទេ (Singleton)
+<details>
+<summary>@Bean Annotation</summary> 
+<p>
+សម្រាប់ ដាក់នៅលើ function ណា ដែលយើងចង់ឲ្យវាក្លាយទៅជា bean, Bean មានន័យថា object មួយដែលយើងយកមកប្រកាស់ជា public ដែលនៅក្នុង project ទាំងមូល កន្លែងណាក៏អាច ហៅប្រើវាបានដែរ ហើយវាប្រកាស់ តែម្ដងទេ (Singleton)
+</p>
+</details>
 - @Qualifier Annotation មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
   <br>Example Code:
   ```java public class UserService {
