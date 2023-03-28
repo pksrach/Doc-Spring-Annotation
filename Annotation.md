@@ -34,4 +34,4 @@ Example in java code:
 - @Qualifier Annotation
 - @Ordered Annotation
 - @Lazy Annotation
-<span style="color:red">This text will be red</span>
+- This text will be <font color="red">red</font>
