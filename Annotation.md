@@ -26,11 +26,9 @@
 Example in java code:
 
 - @Component Annotation គឺជាមេ ពពួក (@Repository, @Service, @Controller)
-- @Repository Annotation ជា Annotation សម្រាប់ធ្វើការ query data, 
-- @Service Annotation
 - @Controller Annotation
-- @Configuration Annotation
-- @Bean Annotation
-- @Qualifier Annotation
+- @Configuration Annotation សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
+- @Bean Annotation សម្រាប់ ដាក់នៅលើ function ណា ដែលយើងចង់ឲ្យវាក្លាយទៅជា bean, Bean មានន័យថា object មួយដែលយើងយកមកប្រកាស់ជា public ដែលនៅក្នុង project ទាំងមូល កន្លែងណាក៏អាច ហៅប្រើវាបានដែរ ហើយវាប្រកាស់ តែម្ដងទេ (Singleton)
+- @Qualifier Annotation មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
 - @Ordered Annotation
 - @Lazy Annotation
