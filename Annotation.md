@@ -21,6 +21,11 @@
 - @JsonInclude(JsonInclude.Include.NON_NULL) បើសិនជា Field page វា Null ចឹង @JsonInclude អត់ឲ្យ Properties ចេញមកទេ, ទាល់តែវាអត់ null បានឲ្យចេញមក
 - @JsonIgnore hide data មិនចង់បង្ហាញ client ឃើញ។ Ex: ដូចជា password, date of birth, etc
 - @Transactional ប្រើសម្រាប់ ការធ្វើប្រតិបត្តិការអ្វីមួយ ដោយក្នុងប្រតិបត្តិការនោះមាន Process ២ ឬ ច្រើនជាងនេះ Process ទី១ update table user, និង process ទី២ update table invoice អញ្ចឹង អាពីរ process នេះ បើមួយណា update មិន success ទេ វានិង role back មកវិញទាំងអស់, វាអត់ update មួយ ហើយមួយទៀត អត់ update ទេ និយាយទៅដូចឈ្នាប់ AND ដែរ បើវាពិតត្រូវពិតទាំងអស់។
+- @Component Annotation គឺជាមេ ពពួក (@Repository, @Service, @Controller)
+- @Controller Annotation
+- @Configuration Annotation សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
+- @Ordered Annotation
+- @Lazy Annotation <br>
 <details>
 <summary>@JsonIgnoreProperties(ignoreUnknown = true)</summary>
 <p>
@@ -34,9 +39,6 @@
 Example in java code:
 </p>
 </details>
-- @Component Annotation គឺជាមេ ពពួក (@Repository, @Service, @Controller)
-- @Controller Annotation
-- @Configuration Annotation សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
 <details>
 <summary>@Bean Annotation</summary> 
 <p>
@@ -47,12 +49,17 @@ Example in java code:
 <summary>@Qualifier Annotation</summary>
 <p>
 មានន័យថា នៅពេលមាន ប្រភេទ Bean លើសពីមួយដែល Bean នោះវាជា ប្រភេទដូចគ្នា ឬ Bean តែមួយនៅក្នុង Spring Applicaton Context យើងត្រូវប្រើប្រាស់ qualifier ដើម្បីបញ្ជាក់ ឈ្មោះផ្សេងគ្នា មានន័យថា មាន Bean ពីរ ផ្សេងគ្នា ដែល Bean នោះជាប្រភេទតែមួយ
-  <br>Example Code:</p>
- </details>
-- @Ordered Annotation
-- @Lazy Annotation <br>
-```javascript
-  Hello();  
-```
+  <br>Example Code:
   
-  `code()`
+```java
+public class UserService {
+    private final UserRepository userRepository;
+
+    public UserService(@Qualifier("userRepositoryImpl1") UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+}
+
+```
+  </p>
+ </details>
