@@ -18,14 +18,51 @@
 - @Autowired សម្រាប់ inject dependencies យកមកប្រើបា្រស់
 - @PostMapping សម្រាប់ បញ្ជួនឬ post ទៅកាន់ endpoint ឬrout ណាមួយ
 - @RequestBody សម្រាប់ ស្នើសុំ ឬrequest ទិន្នន័យណាដែលយើង ចង់បង្កើតដើម្បីឲ្យ user អាចបញ្ចូលទិន្នន័យបាន
-- @JsonInclude(JsonInclude.Include.NON_NULL) បើសិនជា Field page វា Null ចឹង @JsonInclude អត់ឲ្យ Properties ចេញមកទេ, ទាល់តែវាអត់ null បានឲ្យចេញមក
-- @JsonIgnore hide data មិនចង់បង្ហាញ client ឃើញ។ Ex: ដូចជា password, date of birth, etc
-- @Transactional ប្រើសម្រាប់ ការធ្វើប្រតិបត្តិការអ្វីមួយ ដោយក្នុងប្រតិបត្តិការនោះមាន Process ២ ឬ ច្រើនជាងនេះ Process ទី១ update table user, និង process ទី២ update table invoice អញ្ចឹង អាពីរ process នេះ បើមួយណា update មិន success ទេ វានិង role back មកវិញទាំងអស់, វាអត់ update មួយ ហើយមួយទៀត អត់ update ទេ និយាយទៅដូចឈ្នាប់ AND ដែរ បើវាពិតត្រូវពិតទាំងអស់។
-- @Component Annotation គឺជាមេ ពពួក (@Repository, @Service, @Controller)
-- @Controller Annotation
-- @Configuration Annotation សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
-- @Ordered Annotation
-- @Lazy Annotation <br>
+<details>
+<summary>@JsonInclude(JsonInclude.Include.NON_NULL)</summary>
+<p>
+  បើសិនជា Field page វា Null ចឹង @JsonInclude អត់ឲ្យ Properties ចេញមកទេ, ទាល់តែវាអត់ null បានឲ្យចេញមក
+</p>
+</details>
+<details>
+<summary>@JsonIgnore</summary>
+<p>
+  hide data មិនចង់បង្ហាញ client ឃើញ។ Ex: ដូចជា password, date of birth, etc
+</p>
+</details>
+<details>
+<summary>@Transactional</summary>
+<p>
+  ប្រើសម្រាប់ ការធ្វើប្រតិបត្តិការអ្វីមួយ ដោយក្នុងប្រតិបត្តិការនោះមាន Process ២ ឬ ច្រើនជាងនេះ Process ទី១ update table user, និង process ទី២ update table invoice អញ្ចឹង អាពីរ process នេះ បើមួយណា update មិន success ទេ វានិង role back មកវិញទាំងអស់, វាអត់ update មួយ ហើយមួយទៀត អត់ update ទេ និយាយទៅដូចឈ្នាប់ AND ដែរ បើវាពិតត្រូវពិតទាំងអស់។
+</p>
+</details>
+<details>
+<summary>@Component Annotation</summary>
+<p>
+  គឺជាមេ ពពួក (@Repository, @Service, @Controller)
+</p>
+</details>
+<details>
+<summary>@Controller Annotation</summary>
+<p>
+</p>
+</details>
+<details>
+<summary>@Configuration Annotation</summary>
+<p>
+  សម្រាប់ ឲ្យ spring boot ជាអ្នកធ្វើការ configure ជំនួសដោយគ្រាន់តែ ដាក់ annotation មួយនេះ នៅលើ class config
+</p>
+</details>
+<details>
+<summary>@Ordered Annotation</summary>
+<p>
+</p>
+</details>
+<details>
+<summary>@Lazy Annotation</summary>
+<p>
+</p>
+</details>
 <details>
 <summary>@JsonIgnoreProperties(ignoreUnknown = true)</summary>
 <p>
