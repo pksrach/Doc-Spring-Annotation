@@ -1,4 +1,5 @@
-# @Annotations 
+# @Annotations
+
 <details>
 <summary>@RestController</summary>
 <p>
@@ -190,8 +191,10 @@ public class UserService {
     public UserService(@Qualifier("userRepositoryImpl1") UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
 }
 
 ```
   </p>
  </details>
+```
