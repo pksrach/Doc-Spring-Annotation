@@ -1,23 +1,118 @@
-# @Annotations
-- @RestController ប្រើសម្រាប់ កំណត់ថា class មួយណាដែលជា controller class ឬកំណត់ទីតាំងដើម្បី ស្គាល់ controller
-- @RequestMapping("api/") សម្រាប់ Request rout ទៅ endpoint ណាមួយ
-- @MappedSuperclass ប្រើសម្រាប់ចែកfields មានន័យថា យើងមាន class មួយជាមេ ឬentity មួយជាមេ សម្រាប់ចែក fields ដែលមាននៅក្នុង Base Entity ទៅកាន់ Entity កូនៗ
-- @Table(name = “ ”) សម្រាប់ដាក់ឈ្មោះទៅឲ្យ Entity
-- @ManyToMany សម្រាប់ ចងrelationship, FetchType.LAZY សម្រាប់ទាញ entity មកហើយយើងចង់ទាញ row ដែលនៅក្នុង entity នោះមកអត់, មានន័យថា បើគេអត់ហៅ FetchType.LAZY មកប្រើទេ គឺអត់ទាញ data មកទេ
-- @Basic សម្រាប់ default column នៅក្នុង Entity db។ Ex: column id មានdata type ជាlong អញ្ចឹង default វាគឺ 64, data type ជា String អញ្ចឹង default វាគឺ 255 តួអក្សរ
-- @Id សម្រាប់កំណត់ថា Column ហ្នឹងជា id
-- @GeneratedValue សម្រាប់កំណត់ការ Generate Type ID ទៅជា auto ID(auto លេខ ឬលេខអត់តាមលំដាប់) ឬទៅជា ID IDENTITY(រត់តាមលំដាប់លេខ)
-- @Column សម្រាប់កំណត់ attribute ឬcolumn នៅក្នុង Database ថាអាច null បានអត់? កំណត់ length បានប៉ុន្មាន កំណត់ unique ថា column មួយហ្នឹងជា optional ឬក៏ unique
-- @NoRepositoryBean គឺមិនឲ្យបង្កើត Bean ថ្មី
-- @Repository សម្រាប់កំណត់ ថាវាជាប្រភេទ component ដែលធ្វើការទៅលើ repository ។ ហើយត្រូវ Extend ចេញពី JpaRepository មួយទៀតទើបដំណើរការបាន Ex: CategoryRepository: JpaRespository<CategoryEntity, Long> (ចំណាំ <name_entity, type_id ជាអីគេ>) បើ type ជា Long ត្រូវដាក់ Long បើជា String ត្រូវដាក់ String…
-- @Transient កុំឲ្យ data របស់ variable or function calculate វា store នៅក្នុង db
-- @RestController សម្រាប់កំណត់ថា វាជាប្រភេទ Controller ហើយបង្កើតជា API ទៀត
-- @RequestMapping(“/”) សម្រាប់បញ្ជាក់ថា ឲ្យវាស្ថិតនៅ endpoint ណាមួយ
-- @GetMapping សម្រាប់ទៅ get ឬចូលទៅ endpoint ណាមួយដែលយើងចង់ get ។ ហើយ @GetMapping យើងអាចដាក់ rout បន្តបានទៀត Ex: @GetMapping(“/get”)
-- @Service សម្រាប់កំណត់ថា class interface មួយហ្នឹងជា service
-- @Autowired សម្រាប់ inject dependencies យកមកប្រើបា្រស់
-- @PostMapping សម្រាប់ បញ្ជួនឬ post ទៅកាន់ endpoint ឬrout ណាមួយ
-- @RequestBody សម្រាប់ ស្នើសុំ ឬrequest ទិន្នន័យណាដែលយើង ចង់បង្កើតដើម្បីឲ្យ user អាចបញ្ចូលទិន្នន័យបាន
+# @Annotations 
+<details>
+<summary>@RestController</summary>
+<p>
+  ប្រើសម្រាប់ កំណត់ថា class មួយណាដែលជា controller class ឬកំណត់ទីតាំងដើម្បី ស្គាល់ controller
+</p>
+</details>
+<details>
+<summary>@RequestMapping("api/")</summary>
+<p>
+  សម្រាប់ Request rout ទៅ endpoint ណាមួយ
+</p>
+</details>
+<details>
+<summary>@MappedSuperclass</summary>
+<p>
+  ប្រើសម្រាប់ចែកfields មានន័យថា យើងមាន class មួយជាមេ ឬentity មួយជាមេ សម្រាប់ចែក fields ដែលមាននៅក្នុង Base Entity ទៅកាន់ Entity កូនៗ
+</p>
+</details>
+<details>
+<summary>@Table(name = “ ”)</summary>
+<p>
+  សម្រាប់ដាក់ឈ្មោះទៅឲ្យ Entity
+</p>
+</details>
+<details>
+<summary>@ManyToMany</summary>
+<p>
+  សម្រាប់ ចងrelationship, FetchType.LAZY សម្រាប់ទាញ entity មកហើយយើងចង់ទាញ row ដែលនៅក្នុង entity នោះមកអត់, មានន័យថា បើគេអត់ហៅ FetchType.LAZY មកប្រើទេ គឺអត់ទាញ data មកទេ
+</p>
+</details>
+<details>
+<summary>@Basic</summary>
+<p>
+  សម្រាប់ default column នៅក្នុង Entity db។ Ex: column id មានdata type ជាlong អញ្ចឹង default វាគឺ 64, data type ជា String អញ្ចឹង default វាគឺ 255 តួអក្សរ
+</p>
+</details>
+<details>
+<summary>@Id</summary>
+<p>
+  សម្រាប់កំណត់ថា Column ហ្នឹងជា id
+</p>
+</details>
+<details>
+<summary>@GeneratedValue</summary>
+<p>
+  សម្រាប់កំណត់ការ Generate Type ID ទៅជា auto ID(auto លេខ ឬលេខអត់តាមលំដាប់) ឬទៅជា ID IDENTITY(រត់តាមលំដាប់លេខ)
+</p>
+</details>
+<details>
+<summary>@Column</summary>
+<p>
+  សម្រាប់កំណត់ attribute ឬcolumn នៅក្នុង Database ថាអាច null បានអត់? កំណត់ length បានប៉ុន្មាន កំណត់ unique ថា column មួយហ្នឹងជា optional ឬក៏ unique
+</p>
+</details>
+<details>
+<summary>@NoRepositoryBean</summary>
+<p>
+  គឺមិនឲ្យបង្កើត Bean ថ្មី
+</p>
+</details>
+<details>
+<summary>@Repository</summary>
+<p>
+  សម្រាប់កំណត់ ថាវាជាប្រភេទ component ដែលធ្វើការទៅលើ repository ។ ហើយត្រូវ Extend ចេញពី JpaRepository មួយទៀតទើបដំណើរការបាន Ex: CategoryRepository: JpaRespository<CategoryEntity, Long> (ចំណាំ <name_entity, type_id ជាអីគេ>) បើ type ជា Long ត្រូវដាក់ Long បើជា String ត្រូវដាក់ String… 
+</p>
+</details>
+<details>
+<summary>@Transient</summary>
+<p>
+  កុំឲ្យ data របស់ variable or function calculate វា store នៅក្នុង db
+</p>
+</details> 
+<details>
+<summary>@RestController</summary>
+<p>
+  សម្រាប់កំណត់ថា វាជាប្រភេទ Controller ហើយបង្កើតជា API ទៀត
+</p>
+</details> 
+<details>
+<summary>@RequestMapping(“/”)</summary>
+<p>
+  សម្រាប់បញ្ជាក់ថា ឲ្យវាស្ថិតនៅ endpoint ណាមួយ
+</p>
+</details>
+<details>
+<summary>@GetMapping</summary>
+<p>
+  សម្រាប់ទៅ get ឬចូលទៅ endpoint ណាមួយដែលយើងចង់ get ។ ហើយ @GetMapping យើងអាចដាក់ rout បន្តបានទៀត Ex: @GetMapping(“/get”)
+</p>
+</details>
+<details>
+<summary>@Service</summary>
+<p>
+  សម្រាប់កំណត់ថា class interface មួយហ្នឹងជា service
+</p>
+</details>
+<details>
+<summary>@Autowired</summary>
+<p>
+  សម្រាប់ inject dependencies យកមកប្រើបា្រស់
+</p>
+</details>
+<details>
+<summary>@PostMapping</summary>
+<p>
+  សម្រាប់ បញ្ជួនឬ post ទៅកាន់ endpoint ឬrout ណាមួយ
+</p>
+</details>
+<details>
+<summary>@RequestBody</summary>
+<p>
+  សម្រាប់ ស្នើសុំ ឬrequest ទិន្នន័យណាដែលយើង ចង់បង្កើតដើម្បីឲ្យ user អាចបញ្ចូលទិន្នន័យបាន
+</p>
+</details>
 <details>
 <summary>@JsonInclude(JsonInclude.Include.NON_NULL)</summary>
 <p>
