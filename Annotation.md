@@ -157,6 +157,7 @@
 <details>
 <summary>@Lazy Annotation</summary>
 <p>
+សម្រាប់ប្រើ នៅលើ bean, configuration ឬ component។ នៅពេលដែល application start-up running ឬ ចាប់ផ្ដើម run project class ដែលបានដាក់ @Lazy គឺមិនត្រូវបាន initialize ទេ ឬមិនត្រូវប្រកាសមុនប្រើប្រាស់នោះទេ។
 </p>
 </details>
 <details>
