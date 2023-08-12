@@ -152,6 +152,7 @@
 <details>
 <summary>@Ordered Annotation</summary>
 <p>
+  សម្រាប់ប្រើនៅលើពពួក component ឬក៏ bean ដើម្បីធ្វើការ sort នៅពេលប្រកាស់ពពួក class ទាំងនោះ មានន័យថា នៅពេលដែល start-up application @Ordered វាជាអ្នកធ្វើការ ថា class ណាបង្កើតមុន ហើយ class ណាបង្កើតក្រោយ 
 </p>
 </details>
 <details>
