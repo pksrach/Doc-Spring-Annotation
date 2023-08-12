@@ -157,13 +157,13 @@
 <details>
 <summary>@Lazy Annotation</summary>
 <p>
-សម្រាប់ប្រើ នៅលើ bean, configuration ឬ component។ នៅពេលដែល application start-up running ឬ ចាប់ផ្ដើម run project class ដែលបានដាក់ @Lazy គឺមិនត្រូវបាន initialize ទេ ឬមិនត្រូវប្រកាសមុនប្រើប្រាស់នោះទេ។
+  សម្រាប់ប្រើនៅលើ bean, configuration ឬ component class (ពពួកមេ class)។ នៅពេលដែល application start-up running ឬ ចាប់ផ្ដើម run project, class ដែលបានដាក់ @Lazy គឺមិនត្រូវបាន initialize ទេ ឬមិនត្រូវប្រកាសមុនប្រើប្រាស់នោះទេ។ វាចាប់ផ្ដើម បង្កើត ឬ initialize នៅពេលដែលយើងហៅ class ដែលមាន @Lazy ទៅប្រើប្រាស់។
 </p>
 </details>
 <details>
 <summary>@JsonIgnoreProperties(ignoreUnknown = true)</summary>
 <p>
-ប្រើសម្រាប់ថាឧទាហរណ៍ពេលយើង object នឹងចូល database ឧបមារថា save ចូលមាន field id, name អីចឹងទៅ ហើយស្រាប់តែលើកក្រោយយើងថែម sex មួយទៀត ចឹងបើយើងប្រើ jsonIgnoreproperties នឹងគឹវាអត់ error អីទេ តែបើអត់ប្រើ វានឹង error ថាវារក field sex ទិន្នន័យចាស់ៗអត់ឃើញ ចឹងវាតម្រូវឲ្យយើងទៅដាក់ field sex នៅគ្រប់ទិន្នន័យចាស់ៗទាំងអស់។ 
+  ប្រើសម្រាប់ថាឧទាហរណ៍ពេលយើង object នឹងចូល database ឧបមារថា save ចូលមាន field id, name អីចឹងទៅ ហើយស្រាប់តែលើកក្រោយយើងថែម sex មួយទៀត ចឹងបើយើងប្រើ jsonIgnoreproperties នឹងគឹវាអត់ error អីទេ តែបើអត់ប្រើ វានឹង error ថាវារក field sex ទិន្នន័យចាស់ៗអត់ឃើញ ចឹងវាតម្រូវឲ្យយើងទៅដាក់ field sex នៅគ្រប់ទិន្នន័យចាស់ៗទាំងអស់។ 
 </p>
 </details>
 <details>
