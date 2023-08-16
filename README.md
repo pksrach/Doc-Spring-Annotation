@@ -1,7 +1,9 @@
 # Spring-Annotation
+
 This repo is tell you about spring annotation and definite of annotation
 
 # Contributor
+
 - Samrach
 <div>========================================================================</div>
 
@@ -202,6 +204,30 @@ public class UserService {
     }
 
 }
-```
+
+````
   </p>
  </details>
+
+<details>
+<summary>@Test Annotation</summary>
+<p>
+ប្រើប្រាស់នៅលើ Function ណាដែលយើងចង់ Test
+<br>Example Code:
+
+```java
+@Test
+void givenPerson_whenSerializing_thenIdFieldIgnored()
+  throws JsonProcessingException {
+
+    Person person = new Person(1L, "My First Name", "My Last Name");
+    String result = new ObjectMapper().writeValueAsString(person);
+
+    assertThat(result, containsString("firstName"));
+    assertThat(result, containsString("lastName"));
+    assertThat(result, not(containsString("id")));
+}
+````
+
+</p>
+</details>
