@@ -231,3 +231,33 @@ void givenPerson_whenSerializing_thenIdFieldIgnored()
 
 </p>
 </details>
+
+<details>
+<summary>@JsonIgnore Annotation</summary>
+<p>
+ប្រើប្រាស់នៅលើ fields ដែលយើងមិនចង់ ឲ្យវាចូលទៅក្នុង Json រវាង Json និង Java។ យើងប្រើវា ដើម្បី serializing or deserializing រវាង java object ទៅ JSON ឬ ពី JSON ទៅ java object វិញ។
+<br><b>*Serializing និង  Deserializing មានន័យថា វាជាអ្នកបកប្រែពី java object ទៅ json ឬ ពី json ទៅ java object វិញ។</b>
+<br>Example Code:
+
+```java
+class Student {
+   public int id;
+   @JsonIgnore
+   public String systemId;
+   public int rollNo;
+   public String name;
+   @JsonIgnore
+   public String type;
+
+   Student(int id, int rollNo, String systemId, String name, String type){
+      this.id = id;
+      this.systemId = systemId;
+      this.rollNo = rollNo;
+      this.name = name;
+      this.type = type;
+   }
+}
+```
+
+</p>
+</details>
