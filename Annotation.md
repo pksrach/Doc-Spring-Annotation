@@ -7,6 +7,20 @@
 </p>
 </details>
 <details>
+<summary>@ControllerAdvice</summary>
+<p>
+  សម្រាប់ handle រាល់ exceptions ដែលបានឆ្លងកាត់លើ application ទាំងមួល របស់ Spring MVC(Model View Controller) ហើយគេប្រើវានៅលើ Class Controller
+  វាជាអ្នកចាប់ error លើ @RequestMapping
+</p>
+</details>
+<details>
+<summary>@RestControllerAdvice</summary>
+<p>
+  គឺជាអ្នកចាំចាប់ error ជំនាន់ថ្មី ក្នុង Spring 4.3 វាត្រូវបាន បញ្ចូលគ្នាដោយពីរ Annotation (@ControllerAdvice និង @ResponseBody)។
+  ប្រសិនបើយើងប្រើ @RestControllerAdvice គឺវាមាន response body ដោយផ្ទាល់ស្រាប់ ខុសពី @ControllerAdvice តម្រូវឲ្យ Add @ResponseBody បន្ថែមមួយទៀតលើ Class Controller។
+</p>
+</details>
+<details>
 <summary>@RequestMapping("api/")</summary>
 <p>
   សម្រាប់ Request rout ទៅ endpoint ណាមួយ
