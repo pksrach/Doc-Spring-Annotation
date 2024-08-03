@@ -30,7 +30,13 @@ This repo is tell you about spring annotation and definite of annotation
 <details>
 <summary>@Table(name = “ ”)</summary>
 <p>
-  សម្រាប់ដាក់ឈ្មោះទៅឲ្យ Entity
+  សម្រាប់ដាក់ឈ្មោះទៅឲ្យ Table ក្នុង Database។ យើងអាច កំណត់ឈ្មោះ Table ក្នុង Database បាន ដោយគ្រាន់តែកំណត់តាម @Table(name = "sample_name")។
+</p>
+</details>
+<details>
+<summary>@Entity(name = “ ”)</summary>
+<p>
+  ប្រើសម្រាប់កំណត់ Object Class មួយណាដែលជា Entity ហើយបង្កើត Table នៅក្នុង Database ដូចគ្នា។ សម្រាប់ការកំណត់ name ក្នុង @Entity(name = "") មានន័យថា កំណត់ឈ្មោះទៅឲ្យ Entity ដែលយកប្រើក្នុង JPQL Queries។ ករណីមិនបានកំណត់ឈ្មោះ គឺវាយកឈ្មោះ Default ចេញពី Class តែម្ដង។
 </p>
 </details>
 <details>
